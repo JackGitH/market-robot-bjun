@@ -11,36 +11,35 @@ logging:
     log/market.log
 market:
   exchanges:
-#½»Ò×Ëù
+#äº¤æ˜“æ‰€
     wbfex-crtusdt:
       uris:
         uriCreateOrder: https://openapi.wbfex.com/open/api/create_order
         uriCancelOrder: https://openapi.wbfex.com/open/api/cancel_order
       symbol: CRTUSDT
-#ÃÜÔ¿
-      sellpriKey: ea02d4edec06282dad2b5f66382cbced
-      sellpubKey: f849b7a8d6261791b31748514f553c85
-      buypriKey: 806683e5e7eda84a5fa7d939c1a1ab98
-      buypubKey: ce2ba945f98f55d76383c0d3673ad46d
-#µÈ´ıÊ±¼ä
+#å¯†é’¥
+      sellpriKey: 6b03f98a58ee1199de8044a4dafe6416
+      sellpubKey: 4ec466b39dc464cbcf6a797974be4ebb
+      buypriKey: f214f884a1e3da2a1120a760e41c3a97
+      buypubKey: 283bec1cb2808899e81e4680b184d161
+#ç­‰å¾…æ—¶é—´
       waitTimes: 1900
-#¼Û¸ñ»ù´¡¼Û
+#ä»·æ ¼åŸºç¡€ä»·
       sellBasePrice: 0.07139
       buyBasePrice: 0.07
-#¼Û¸ñ¸¡¶¯
+#ä»·æ ¼æµ®åŠ¨
       buyfluctuate: 10
       sellfluctuate: 6
-#¼Û¸ñ¾«¶È
+#ä»·æ ¼ç²¾åº¦
       priceScale: 6
-#ÊıÁ¿»ùÊı
+#æ•°é‡åŸºæ•°
       buyamount: 120
       sellAmount: 285
-#ÊıÁ¿¸¡¶¯
+#æ•°é‡æµ®åŠ¨
       amountFluctuate: 50
-#Âòµ¥Õ¼±È
+#ä¹°å•å æ¯”
       buyOrderRatio: 4
       buyType: BUY
       sellType: SELL
       stopBuy: false
       stopSell: false
-
