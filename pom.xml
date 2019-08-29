@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<jackson.version>2.8.7</jackson.version>
+		<jackson.version>2.9.5</jackson.version>
 		<okhttp.version>3.6.0</okhttp.version>
 		<slf4j.version>1.7.24</slf4j.version>
 	</properties>
@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.58</version>
+			<version>1.2.58</version	>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -52,11 +52,11 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.24</version>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-nop</artifactId>
 			<version>1.7.2</version>
-		</dependency>
+		</dependency>-->
         <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
@@ -80,6 +80,14 @@
             <artifactId>spring-cloud-context</artifactId>
             <version>2.0.2.RELEASE</version>
         </dependency>
+
+		<dependency>
+			<groupId> org.springframework.boot </groupId>
+			<artifactId> spring-boot-configuration-processor </artifactId>
+			<optional> true </optional>
+		</dependency>
+
+
 
     </dependencies>
 
