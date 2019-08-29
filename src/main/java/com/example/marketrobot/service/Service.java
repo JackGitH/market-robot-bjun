@@ -75,10 +75,16 @@ public class Service {
         }
         Random random2 = new Random();
         int rand = random2.nextInt(10);
-        if(rand>=4&&orderVo.getSide().equals(exchange.getBuyType())){
+        if(rand>4&&orderVo.getSide().equals(exchange.getBuyType())){
             orderVo.setSecret_key(exchange.getBuypriKey());
             orderVo.setApi_key(exchange.getBuypubKey());
-        }else {
+        }else if (rand<5&&orderVo.getSide().equals(exchange.getBuyType())){
+            orderVo.setSecret_key(exchange.getSellpriKey());
+            orderVo.setApi_key(exchange.getSellpubKey());
+        }else if(rand>4&&orderVo.getSide().equals(exchange.getSellType())){
+            orderVo.setSecret_key(exchange.getBuypriKey());
+            orderVo.setApi_key(exchange.getBuypubKey());
+        } else {
             orderVo.setSecret_key(exchange.getSellpriKey());
             orderVo.setApi_key(exchange.getSellpubKey());
         }
