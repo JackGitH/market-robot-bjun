@@ -7,10 +7,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Exchange {
     private String website;
-    private String sellpriKey;
-    private String sellpubKey;
-    private String buypriKey;
-    private String buypubKey;
+    private String userIdbuy;
+    private String secretbuy;
+    private String MD5Keybuy;
+    private String userIdsell;
+    private String secretsell;
+    private String MD5Keysell;
     private long waitTimes;
     private int buyfluctuate;
     private int sellfluctuate;
@@ -22,9 +24,12 @@ public class Exchange {
     private String sellAmount;
     private int buyOrderRatio;
     private Uris uris;
-    private String symbol;
+    private String coinName;
+    private String payCoinIdName;
+
     private String buyType;
     private String sellType;
+    private String clearTime;
 
     private boolean stopBuy;
     private boolean stopSell;
@@ -57,13 +62,7 @@ public class Exchange {
         return buyamount;
     }
 
-    public String getBuypriKey() {
-        return buypriKey;
-    }
 
-    public String getBuypubKey() {
-        return buypubKey;
-    }
 
     public String getSellAmount() {
         return sellAmount;
@@ -73,13 +72,7 @@ public class Exchange {
         return buyType;
     }
 
-    public String getSellpubKey() {
-        return sellpubKey;
-    }
 
-    public String getSellpriKey() {
-        return sellpriKey;
-    }
 
     public Uris getUris() {
         return uris;
@@ -101,25 +94,13 @@ public class Exchange {
         this.buyfluctuate = buyfluctuate;
     }
 
-    public void setBuypriKey(String buypriKey) {
-        this.buypriKey = buypriKey;
-    }
+
 
     public void setPriceScale(int priceScale) {
         this.priceScale = priceScale;
     }
 
-    public void setBuypubKey(String buypubKey) {
-        this.buypubKey = buypubKey;
-    }
 
-    public void setSellpriKey(String sellpriKey) {
-        this.sellpriKey = sellpriKey;
-    }
-
-    public void setSellpubKey(String sellpubKey) {
-        this.sellpubKey = sellpubKey;
-    }
 
     public void setWaitTimes(long waitTimes) {
         this.waitTimes = waitTimes;
@@ -137,13 +118,7 @@ public class Exchange {
         this.uris = uris;
     }
 
-    public String getSymbol() {
-        return symbol;
-    }
 
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
 
     public void setBuyType(String buyType) {
         this.buyType = buyType;
@@ -195,5 +170,80 @@ public class Exchange {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+
+
+
+    public String getUserIdbuy() {
+        return userIdbuy;
+    }
+
+    public void setUserIdbuy(String userIdbuy) {
+        this.userIdbuy = userIdbuy;
+    }
+
+    public String getSecretbuy() {
+        return secretbuy;
+    }
+
+    public void setSecretbuy(String secretbuy) {
+        this.secretbuy = secretbuy;
+    }
+
+    public String getMD5Keybuy() {
+        return MD5Keybuy;
+    }
+
+    public void setMD5Keybuy(String MD5Keybuy) {
+        this.MD5Keybuy = MD5Keybuy;
+    }
+
+    public String getUserIdsell() {
+        return userIdsell;
+    }
+
+    public void setUserIdsell(String userIdsell) {
+        this.userIdsell = userIdsell;
+    }
+
+    public String getSecretsell() {
+        return secretsell;
+    }
+
+    public void setSecretsell(String secretsell) {
+        this.secretsell = secretsell;
+    }
+
+    public String getMD5Keysell() {
+        return MD5Keysell;
+    }
+
+    public void setMD5Keysell(String MD5Keysell) {
+        this.MD5Keysell = MD5Keysell;
+    }
+
+    public String getCoinName() {
+        return coinName;
+    }
+
+    public void setCoinName(String coinName) {
+        this.coinName = coinName;
+    }
+
+    public String getPayCoinIdName() {
+        return payCoinIdName;
+    }
+
+    public void setPayCoinIdName(String payCoinIdName) {
+        this.payCoinIdName = payCoinIdName;
+    }
+
+    public String getClearTime() {
+        return clearTime;
+    }
+
+    public void setClearTime(String clearTime) {
+        this.clearTime = clearTime;
     }
 }

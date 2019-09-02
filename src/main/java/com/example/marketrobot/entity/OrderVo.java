@@ -1,27 +1,37 @@
 package com.example.marketrobot.entity;
 
 public class OrderVo {
-    private String amount;
-    private String side;
-    private String price;
-    private String api_key;
-    private String secret_key;
-    private String symbol;
-    private String buyType;
+    private String coinName;// 交易币种名称
+    private String payCoinName;// 支付币种名称
+    private String amount;// 数量
+    private String price;// 委托价格
+    private String type;// 交易类型 1 买 2 卖
+    private String cipherText;// 秘钥
+    private String secret;// 交易密码
+    private String userId;// 用户id
+
+    public String getCoinName() {
+        return coinName;
+    }
+
+    public void setCoinName(String coinName) {
+        this.coinName = coinName;
+    }
+
+    public String getPayCoinName() {
+        return payCoinName;
+    }
+
+    public void setPayCoinName(String payCoinName) {
+        this.payCoinName = payCoinName;
+    }
+
     public String getAmount() {
         return amount;
     }
 
     public void setAmount(String amount) {
         this.amount = amount;
-    }
-
-    public String getSide() {
-        return side;
-    }
-
-    public void setSide(String side) {
-        this.side = side;
     }
 
     public String getPrice() {
@@ -32,35 +42,35 @@ public class OrderVo {
         this.price = price;
     }
 
-    public String getApi_key() {
-        return api_key;
+    public String getType() {
+        return type;
     }
 
-    public void setApi_key(String api_key) {
-        this.api_key = api_key;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getSecret_key() {
-        return secret_key;
+    public String getCipherText() {
+        return cipherText;
     }
 
-    public void setSecret_key(String secret_key) {
-        this.secret_key = secret_key;
+    public void setCipherText(String cipherText) {
+        this.cipherText = cipherText;
     }
 
-    public String getSymbol() {
-        return symbol;
+    public String getSecret() {
+        return secret;
     }
 
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
+    public void setSecret(String secret) {
+        this.secret = secret;
     }
 
-    public String getBuyType() {
-        return buyType;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setBuyType(String buyType) {
-        this.buyType = buyType;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

@@ -44,11 +44,11 @@ public class AdminController {
         if(exchange.getWebsite()==null){
             return "err params :Website is null ";
         }
-        if(exchange.getSymbol()==null){
+        if(exchange.getCoinName()==null){
             return "err params :Symbol is null ";
         }
         Map<String,Exchange> exchangeMap = config.getExchanges();
-        String key = exchange.getWebsite()+"-"+exchange.getSymbol();
+        String key = exchange.getWebsite()+"-"+exchange.getCoinName();
         Exchange oldExchange = exchangeMap.get(key);
         if(oldExchange==null){
             return "err params :"+JSONObject.toJSONString(exchange);
@@ -61,11 +61,11 @@ public class AdminController {
         if(exchange.getWebsite()==null){
             return "err params :Website is null ";
         }
-        if(exchange.getSymbol()==null){
+        if(exchange.getCoinName()==null){
             return "err params :Symbol is null ";
         }
         Map<String,Exchange> exchangeMap = config.getExchanges();
-        String key = exchange.getWebsite()+"-"+exchange.getSymbol();
+        String key = exchange.getWebsite()+"-"+exchange.getCoinName();
         Exchange oldExchange = exchangeMap.get(key);
         if(oldExchange==null){
             return "err params :"+JSONObject.toJSONString(exchange);

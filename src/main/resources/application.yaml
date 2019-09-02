@@ -11,35 +11,46 @@ logging:
     log/market.log
 market:
   exchanges:
-#交易所
+#交易所 http://47.56.43.220:8090/openApi/addEntrust
     wbfex-crtusdt:
       uris:
-        uriCreateOrder: https://openapi.wbfex.com/open/api/create_order
-        uriCancelOrder: https://openapi.wbfex.com/open/api/cancel_order
-      symbol: CRTUSDT
+        uriCreateOrder: http://47.56.43.220:8090/openApi/tradeApi/addEntrust
+        uriCancelOrder: http://47.56.43.220:8090/openApi/tradeApi/batchCancelEntrust
+        getUriCancelOrderAll: http://47.56.43.220:8090/openApi/tradeApi/batchCancelEntrust
+
+      coinName: ETH
+      payCoinIdName: USDT
+
+
+
 #密钥
-      sellpriKey: 6b03f98a58ee1199de8044a4dafe6416
-      sellpubKey: 4ec466b39dc464cbcf6a797974be4ebb
-      buypriKey: f214f884a1e3da2a1120a760e41c3a97
-      buypubKey: 283bec1cb2808899e81e4680b184d161
+      userIdbuy: 1309724
+      secretbuy: 987321lv
+      MD5Keybuy: UL1SfRaJbZEARgoX
+
+      userIdsell: 1309724
+      secretsell: 987321lv
+      MD5Keysell: UL1SfRaJbZEARgoX
 #等待时间
       waitTimes: 1900
 #价格基础价
-      sellBasePrice: 0.07139
-      buyBasePrice: 0.07
+      sellBasePrice: 190
+      buyBasePrice: 180
 #价格浮动
-      buyfluctuate: 10
-      sellfluctuate: 6
+      buyfluctuate: 1
+      sellfluctuate: 1
 #价格精度
       priceScale: 6
 #数量基数
-      buyamount: 120
-      sellAmount: 285
+      buyamount: 1
+      sellAmount: 1
 #数量浮动
       amountFluctuate: 50
 #买单占比
       buyOrderRatio: 4
-      buyType: BUY
-      sellType: SELL
+      buyType: 1
+      sellType: 2
       stopBuy: false
       stopSell: false
+# 多久清空一次账号交易记录  单位是小时 可以为小数（小数位数最多4位）
+      clearTime: 0.00167
