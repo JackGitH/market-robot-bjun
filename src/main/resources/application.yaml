@@ -32,7 +32,7 @@ market:
       secretsell: 987321lv
       MD5Keysell: UL1SfRaJbZEARgoX
 #等待时间
-      waitTimes: 1900
+      waitTimes: 10000
 #价格基础价
       sellBasePrice: 190
       buyBasePrice: 180
@@ -53,4 +53,4 @@ market:
       stopBuy: false
       stopSell: false
 # 多久清空一次账号交易记录  单位是小时 可以为小数（小数位数最多4位）
-      clearTime: 0.00167
+      clearTime: 0.0167
